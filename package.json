@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@types/redux-logger": "^3.0.9",
     "@types/styled-components": "^5.1.24",
     "add": "^2.0.6",
     "and": "^0.0.3",

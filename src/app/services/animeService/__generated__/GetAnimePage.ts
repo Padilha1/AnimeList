@@ -20,7 +20,7 @@ export interface GetAnimePage_Page_media_coverImage {
   /**
    * The cover image url of the media at medium size
    */
-  medium: string | null;
+  large: string | null;
 }
 
 export interface GetAnimePage_Page_media {
@@ -41,6 +41,7 @@ export interface GetAnimePage_Page_media {
    * The cover images of the media
    */
   coverImage: GetAnimePage_Page_media_coverImage | null;
+  // episodes: GetAnimePage_Page_media_episodes | null;
 }
 
 export interface GetAnimePage_Page {

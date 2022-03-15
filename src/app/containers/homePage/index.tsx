@@ -5,6 +5,7 @@ import animeService from "../../services/animeService";
 import { setAnimePage } from "./homePageSlice";
 import { GetAnimePage } from "../../services/animeService/__generated__/GetAnimePage";
 import { useAppDispatch } from "../../hooks";
+import { FireAnime } from "./fireAnime";
 
 interface IHomePageProps {}
 
@@ -26,7 +27,7 @@ export function HomePage(props: IHomePageProps){
    
    
     const fetchAnimePage = async () => {
-        const animePage = await animeService.getAnimePage(0).catch((err) => {
+        const animePage = await animeService.getAnimePage(0, 200).catch((err) => {
             console.log("Error: ", err);        
         });
         
@@ -40,6 +41,7 @@ export function HomePage(props: IHomePageProps){
     return (
         <Container>
             <h1>Fire Animes</h1>
+            <FireAnime/>
         </Container>
     )
 }

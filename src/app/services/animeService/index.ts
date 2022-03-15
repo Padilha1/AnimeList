@@ -10,7 +10,7 @@ class AnimeService {
             const response = await apolloClient.query({ query: GET_ANIME_PAGE, variables: { page, perPage } });
             if(!response || !response.data)
                 throw new Error ("Cannote get anime List !" );
-            return response.data;
+            return response.data.Page;
         } catch(err){
             throw err;
         }
